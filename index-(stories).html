@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              bebas: ["Bebas Neue", "cursive"],
+              mono: ["Montserrat", "sans-serif"],
+            },
+            colors: {
+              yellow: "#FECC02",
+              offBlack: "#131314",
+              darkGrey: "#4E4E4E",
+            },
+          },
+        },
+      };
+    </script>
+     <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+   />
+    <style>
+      /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #b4b3b7 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  /* *::-webkit-scrollbar-track {
+    background: #ffffff;
+  } */
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #b4b3b7;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+    .anchor-under:hover {
+      text-decoration: underline;
+    }
+    html,
+      body {
+        position: relative;
+        height: 100%;
+       
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+      .anchor-under:hover {
+        text-decoration: underline;
+      }
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+      }
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body class="bg-[#F0F2F5]">
+    <!-- Navbar-start -->
+    <header class="shadow-md bg-white w-[420px] lg:w-full fixed -mt-3">
+      <nav
+        class="h-14 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 flex items-center"
+      >
+        <div
+          class="container flex flex-wrap items-center justify-between mx-auto"
+        >
+          <a href="https://facebook.com/" class="flex items-center w-24 lg:w-40 lg:-ml-10">
+            <img src="./images and videos/facebook.png" alt="" />
+          </a>
+          <div class="flex items-center md:order-2">
+              <div class="flex gap-x-3">
+                 <div>
+                  <i title="Messenger" class="fa-brands fa-facebook-messenger cursor-pointer bg-slate-200 rounded-full p-2.5 text-[18px] mr-2 hover:bg-slate-300"></i>
+                  <i title="Notification" class="fa-solid fa-bell bg-slate-200 cursor-pointer rounded-full p-2.5 text-[18px] hover:bg-slate-300"></i>
+                 </div>
+                <a href="https://www.facebook.com/md.ahsanmustafa.3/">
+                  <img title="Account" 
+                  class="w-10 h-10 rounded-full"
+                  src="./images and videos/profile.png"
+                  alt="user photo"
+                />
+                </a>
+              </div>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="mobile-menu-2"
+          >
+            <div class="w-[120px] lg:w-[530px]">
+              <form class="flex items-center">
+                <label for="simple-search" class="sr-only">Search</label>
+                <div class="relative w-full">
+                  <div
+                    class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    type="text"
+                    id="simple-search"
+                    class="bg-[#F0F2F5] p-57 outline-none border-none text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Search Facebook"
+                    required
+                  />
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Navbar-end -->
+    <!-- 3-grid-sections -->
+    <section class="grid grid-cols-1 lg:grid-cols-3 mt-3">
+    <!-- Left-section -->
+    <section class="">
+      <div id="drawer-navigation" class="fixed z-40 h-screen p-4 overflow-y-auto mt-16 bg-[#F0F2F5] lg:w-80 dark:bg-gray-800 lg:0 -ml-10 lg:ml-0" tabindex="-1" aria-labelledby="drawer-navigation-label">
+        </button>
+      <div class="py-4">
+          <ul class="space-y-2 hidden lg:block">
+             <li>
+                <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <i class="fa-solid fa-house text-[#056BE1] text-xl"></i>
+                   <span class="ml-3 font-semibold hidden md:block lg:block">Home</span>
+                </a>
+             </li>
+             <li>
+                <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <a href="https://www.facebook.com/md.ahsanmustafa.3/">
+                    <img title="Account" 
+                    class="w-7 h-7 rounded-full"
+                    src="./images and videos/profile.png"
+                    alt="user photo"
+                  />
+                  </a>
+                      <span  class="flex-1 ml-3 text-left whitespace-nowrap font-bold hidden md:block lg:block">Ahsan Mostafa </span><hr/>
+                      
+                </button>
+                <hr class="border-1 border-gray-300"/>
+               
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <i class="fa-solid fa-user-group text-[#056BE1] text-xl"></i>
+                   <span class="flex-1 ml-3 whitespace-nowrap font-semibold hidden md:block lg:block">Friends</span>
+                   
+                </a>
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <i class="fa-solid fa-business-time text-[#056BE1] text-xl"></i>
+                   <span class="flex-1 ml-3 whitespace-nowrap font-semibold hidden md:block lg:block">Most recent</span>
+                   
+                </a>
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <i class="fa-solid fa-people-group text-[#056BE1] text-xl"></i>
+                   <span class="flex-1 ml-3 whitespace-nowrap font-semibold hidden md:block lg:block">Group</span>
+                </a>
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <i class="fa-solid fa-store text-[#056BE1] text-xl"></i>
+                   <span class="flex-1 ml-3 whitespace-nowrap font-semibold hidden md:block lg:block">Marketplace</span>
+                </a>
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <i class="fa-sharp fa-solid fa-video text-[#056BE1] text-xl"></i>
+                   <span class="flex-1 ml-3 whitespace-nowrap font-semibold hidden md:block lg:block">Watch</span>
+                </a>
+             </li>
+             <li>
+                <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <img src="./images and videos/dot.png" class="w-4" alt="">
+                  <span class="flex-1 ml-3 whitespace-nowrap font-semibold hidden md:block lg:block">See all</span>
+                </a>
+                <hr class="border-1 border-gray-300"/>
+             </li>
+             <li>
+              <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 -ml-3">
+                 <div class="flex">
+                  <a href="https://www.facebook.com/md.ahsanmustafa.3/">
+                    <img title="Account" 
+                    class="w-8 h-7 rounded-full"
+                    src="./images and videos/cpi.jpg"
+                    alt="user photo"
+                  />
+                  </a>
+                   <small class="flex-1 ml-3 whitespace-nowrap font-bold cursor-pointer hidden md:block lg:block">চট্টগ্রাম পলিটেকনিক ইনস্টিটিউট</small>
+                 </div>
+                </a>
+           </li>
+             <li>
+              <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 -ml-3">
+                <div class="flex">
+                  <a href="https://www.facebook.com/md.ahsanmustafa.3/">
+                    <img title="Account" 
+                    class="w-8 h-7 rounded-full"
+                    src="./images and videos/pro1.jpg"
+                    alt="user photo"
+                  />
+                  </a>
+                   <span class="flex-1 ml-3 whitespace-nowrap font-semibold cursor-pointer hidden md:block lg:block">Programming Hero Courses</span>
+                </div>
+              </a>
+           </li>
+             <li>
+              <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 -ml-3">
+                <div class="flex">
+                  <a href="https://www.facebook.com/md.ahsanmustafa.3/">
+                    <img title="Account" 
+                    class="w-8 h-7 rounded-full"
+                    src="./images and videos/pro2.jpg"
+                    alt="user photo"
+                  />
+                  </a>
+                   <span title="Programming Hero Community" class="flex-1 ml-3 whitespace-nowrap font-semibold cursor-pointer hidden md:block lg:block">Programming Hero C...</span>
+                </div>
+              </a>
+           </li>
+             <li>
+              <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                <i class="fa-solid fa-people-group text-[#5398e7] text-xl"></i>
+                 <span class="flex-1 ml-3 whitespace-nowrap font-semibold cursor-pointer hidden md:block lg:block">See all groups</span>
+              </a>
+              <hr class="border-1 border-gray-300"/>
+           </li>
+             <li>
+              <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 -ml-3">
+                <div class="flex">
+                  <a href="https://www.facebook.com/md.ahsanmustafa.3/">
+                    <img title="Account" 
+                    class="w-8 h-7 rounded-full"
+                    src="./images and videos/duet.jpg"
+                    alt="user photo"
+                  />
+                  </a>
+                   <span class="flex-1 ml-3 whitespace-nowrap font-semibold cursor-pointer hidden md:block lg:block">DUET Admission Trigonometry</span>
+                </div>
+              </a>
+              </a>
+           </li>
+             <li>
+              <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 -ml-3">
+                <div class="flex">
+                  <a href="https://www.facebook.com/md.ahsanmustafa.3/">
+                    <img title="Account" 
+                    class="w-8 h-7 rounded-full"
+                    src="./images and videos/yes.jpg
+                    "
+                    alt="user photo"
+                  />
+                  </a>
+                   <span class="flex-1 ml-3 whitespace-nowrap font-semibold cursor-pointer hidden md:block lg:block">Young Elite Society - YES ♥</span>
+                </div>
+              </a>
+           </li>
+             <li>
+              <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 -ml-3">
+                <div class="flex">
+                  <a href="https://www.facebook.com/md.ahsanmustafa.3/">
+                    <img title="Account" 
+                    class="w-8 h-7 rounded-full"
+                    src="./images and videos/pro3.jpg
+                    "
+                    alt="user photo"
+                  />
+                  </a>
+                   <span title="Complete Web Development: Batch-5" class="flex-1 ml-3 whitespace-nowrap font-semibold cursor-pointer hidden md:block lg:block">Complete Web Developm...</span>
+                </div>
+              </a>
+           </li>
+             <li>
+              <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 -ml-3">
+                <div class="flex">
+                  <a href="https://www.facebook.com/md.ahsanmustafa.3/">
+                    <img title="Account" 
+                    class="w-8 h-7 rounded-full"
+                    src="./images and videos/discuss.jpg
+                    "
+                    alt="user photo"
+                  />
+                  </a>
+                   <span title="Discuss with Samsus Salehin Sabbir" class="flex-1 ml-3 whitespace-nowrap font-semibold cursor-pointer hidden md:block lg:block">Discuss with Samsus...</span>
+                </div>
+              </a>
+           </li>
+             <li>
+              <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 -ml-3">
+                <div class="flex">
+                  <a href="https://www.facebook.com/md.ahsanmustafa.3/">
+                    <img title="Account" 
+                    class="w-8 h-7 rounded-full"
+                    src="./images and videos/shikbe.jpg
+                    "
+                    alt="user photo"
+                  />
+                  </a>
+                   <span title="Shikhbe Shobai (#শিখবেসবাই) - Freelancers Community" class="flex-1 ml-3 whitespace-nowrap font-semibold cursor-pointer hidden md:block lg:block">Shikhbe Shobai (#শিখবেসবাই..</span>
+                </div>
+              </a>
+           </li>
+             <li>
+              <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                <i class="fa-sharp fa-solid fa-link text-xl"></i>
+                 <span class="flex-1 ml-3 whitespace-nowrap font-semibold hidden md:block lg:block">See all shortcuts</span>
+              </a>
+           </li>
+<div class="py-6 hidden md:block lg:block">
+  <footer class="flex gap-x-1 ">
+    <small class="anchor-under text-gray-500">Privacy</small>
+    <small class="anchor-under text-gray-500">Terms  </small>
+    <small class="anchor-under text-gray-500">Advertising</small>
+    <small class="anchor-under text-gray-500">Ad choices ➤</small><br>
+  </footer>
+    <div class="flex gap-x-1">
+    <small class="anchor-under text-gray-500">Cookies</small>
+    <small class="anchor-under text-gray-500">Meta</small>
+    <small class="anchor-under text-gray-500 pb-6">© 2023</small>
+    </div>
+</div>
+      </ul>
+       </div>
+    </div>
+  </section>
+  <!-- middle-section -->
+    <!-- Story -->
+    <section>
+    <div class="my-4">
+      <div class="border shadow-md rounded-md py-5 px-2 bg-white mt-14">
+        <div class="flex justify-around my-4 gap-x-2 text-[17px] text-[#1876F2]">
+          <div>
+            <i class="fa-solid fa-book-open"></i>
+        <a href="http://127.0.0.1:5501/index-(stories).html" class="text-[15px] font-bold">Stories</a>
+          </div>
+          <div class="flex items-center">
+          <img src="./images and videos/reels.png" alt="">
+        <a href="http://127.0.0.1:5501/index-(reels).html" class="text-[15px] font-bold">Reels</a>
+          </div>
+          <div class="flex items-center">
+            <img src="./images and videos/add-video1.png" alt="">
+        <a href="" class="text-[15px] font-bold ml-1">Rooms</a>
+          </div>
+        </div>
+        <hr class="border border-gray-300 -mt-2 mb-4">
+      <div class="swiper mySwiperPopular h-50">
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide bg-[url('./images/story/mark.jpg')] bg-cover bg-center w-[158px] h-[200px]  relative rounded-lg"
+          >
+            <div class="text-white absolute top-3 -ml-14">
+             <img style="width: 40px;" class="border-4 border-blue-700 rounded-full" src="./images/story/mark-pro.jpg" alt="">
+            </div>
+            <h2 class="text-white text-[15px] font-bold text-left mt-36 ml-2">Mark Zukerbarg</h2>
+          </div>
+          <div
+            class="swiper-slide bg-[url('./images/story/bruce.jpg')] bg-cover bg-center w-[158px] h-[200px]  relative rounded-lg"
+          >
+            <div class="text-white absolute top-3 -ml-14">
+             <img style="width: 40px;" class="border-4 border-blue-700 rounded-full" src="./images/story/brouce-pro.jpg" alt="">
+            </div>
+            <h2 class="text-white text-[15px] font-bold text-left mt-36 ml-2">Brouce</h2>
+          </div>
+          <div
+            class="swiper-slide bg-[url('./images/story/herry.jpg')] bg-cover bg-center w-[158px] h-[200px]  relative rounded-lg"
+          >
+            <div class="text-white absolute top-3 -ml-14">
+             <img style="width: 40px;" class="border-4 border-blue-700 rounded-full" src="./images/story/herry-pro.jpg" alt="">
+            </div>
+            <h2 class="text-white text-[15px] font-bold text-left mt-36 ml-2">Herry</h2>
+          </div>
+          <div
+            class="swiper-slide bg-[url('./images/story/sam.png')] bg-cover bg-center w-[158px] h-[200px]  relative rounded-lg"
+          >
+            <div class="text-white absolute top-3 -ml-14">
+             <img style="width: 40px;" class="border-4 border-blue-700 rounded-full" src="./images/story/sam-pro.jpg" alt="">
+            </div>
+            <h2 class="text-white text-[15px] font-bold text-left mt-36 ml-2">Sam John</h2>
+          </div>
+          <div
+          class="swiper-slide bg-[url('./images/story/tom.jpg')] bg-cover bg-center w-[158px] h-[200px]  relative rounded-lg"
+        >
+          <div class="text-white absolute top-3 -ml-14">
+           <img style="width: 40px;" class="border-4 border-blue-700 rounded-full" src="./images/story/tom-pro.jpg" alt="">
+          </div>
+          <h2 class="text-white text-[15px] font-bold text-left mt-36 ml-2">Tom Pro</h2>
+        </div>
+        <div
+            class="swiper-slide bg-[url('./images/story/jhankar.jpg')] bg-cover bg-center w-[158px] h-[200px]  relative rounded-lg"
+          >
+            <div class="text-white absolute top-3 -ml-14">
+             <img style="width: 40px;" class="border-4 border-blue-700 rounded-full" src="./images/story/jhankar-pro.jpg" alt="">
+            </div>
+            <h2 class="text-white text-[15px] font-bold text-left mt-36 ml-2">Jhankar Mahbub</h2>
+          </div>
+          <div
+            class="swiper-slide bg-[url('./images/story/anisul.jpg')] bg-cover bg-center w-[158px] h-[200px]  relative rounded-lg"
+          >
+            <div class="text-white absolute top-3 -ml-14">
+             <img style="width: 40px;" class="border-4 border-blue-700 rounded-full" src="./images/story/anisul-pro.jpg" alt="">
+            </div>
+            <h2 class="text-white text-[15px] font-bold text-left mt-36 ml-2">Anisul Islam</h2>
+          </div>
+          <div
+          class="swiper-slide bg-[url('./images/story/rose.jpg')] bg-cover bg-center w-[158px] h-[200px]  relative rounded-lg"
+        >
+          <div class="text-white absolute top-3 -ml-14">
+           <img style="width: 40px;" class="border-4 border-blue-700 rounded-full" src="./images/story/rose-pro.jpg" alt="">
+          </div>
+          <h2 class="text-white text-[15px] font-bold text-left mt-36 ml-2">Rose</h2>
+        </div>
+        <div
+            class="swiper-slide bg-[url('./images/story/zaheed.jpg')] bg-cover bg-center w-[158px] h-[200px]  relative rounded-lg"
+          >
+            <div class="text-white absolute top-3 -ml-14">
+             <img style="width: 40px;" class="border-4 border-blue-700 rounded-full" src="./images/story/zaheed-pro.jpg" alt="">
+            </div>
+            <h2 class="text-white text-[15px] font-bold text-left mt-36 ml-2">Zaheed Sabur</h2>
+          </div>
+          <div
+            class="swiper-slide bg-[url('./images/story/jhankar.jpg')] bg-cover bg-center w-[158px] h-[200px]  relative rounded-lg"
+          >
+            <div class="text-white absolute top-3 -ml-14">
+             <img style="width: 40px;" class="border-4 border-blue-700 rounded-full" src="./images/story/jhankar-pro.jpg" alt="">
+            </div>
+            <h2 class="text-white text-[15px] font-bold text-left mt-36 ml-2">Jhankar Mahbub</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" mt-5 rounded-lg p-5 shadow-md bg-white">
+      <div class="flex items-center">
+        <img style="width: 40px;" class="rounded-full mr-3" src="./images and videos/profile.png" alt="">
+      <div class="w-[380px]">
+        <form class="flex items-center">
+          <label for="simple-search" class="sr-only">Search</label>
+          <div class="relative w-full">
+            <div
+              class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+            >
+            </div>
+            <input
+              type="text"
+              id="simple-search"
+              class="bg-[#F0F2F5] p-57 outline-none border-none text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="What's on your mind, Ahsan?"
+              required
+            />
+          </div>
+        </form>
+        </div>
+      </div>
+      <hr class="my-5">
+      <div class="flex font-bold font-[12px] text-gray-700 gap-x-7 justify-center">
+        <div class="flex items-center">
+          <i class="fa-solid fa-video text-2xl text-red-600 mr-2"></i>
+        <h2 class="">Live video</h2>
+        </div>
+        <div class="flex items-center">
+          <i class="fa-regular fa-images text-2xl text-green-400 mr-2"></i>     
+         <h2>Photo/video</h2>
+        </div>
+         <div class="flex items-center">
+          <i class="fa-regular fa-face-laugh text-2xl text-[#b9ab2b] mr-2"></i>
+        <h2>Feeling/activity</h2>
+         </div>
+      </div>
+    </div>
+    <div>
+      <div class="bg-white mt-5 rounded-t-md p-5 shadow-md">
+        <div class="flex justify-between">
+          <div class="flex">
+            <img style="width: 40px; height:40px; 
+            " class="rounded-full mr-3" src="./images/story/mark-pro.jpg" alt="">
+            <div class="">
+              <h2 class="font-semibold text-gray-700">Mark Zukerbarg</h2>
+            <div class="flex items-center">
+              <p>Just now <span>∙</span></p>
+            <i class="fa-solid fa-earth-americas text-gray-600 text-[12px] ml-1"></i>
+            </div>
+            </div>
+          </div>
+          <div class="text-xl text-gray-600 ">
+            <i class="fa-solid fa-ellipsis mr-3 hover:bg-slate-100 cursor-pointer rounded-full p-2"></i>
+          <i class="fa-solid fa-xmark hover:bg-slate-100 cursor-pointer rounded-full p-2"></i>
+          </div>
+        </div>
+        <p class="mt-3">Priscilla and I are so happy to welcome our daughter August! We wrote her a letter about the world we hope she grows up in, and also hoping she doesn't grow up too fast.</p>
+            </div>
+            <img src="./images/posts/mark.jpg" alt="">
+            <div class="mt-3 bg-white py-2">
+              <div class="flex items-center cursor-pointer ml-2">
+                <i class="fa-solid fa-thumbs-up bg-blue-500 text-[10px] text-white p-1 rounded-full"></i>
+              <i class="fa-brands fa-gratipay text-[17px] -ml-2 text-red-600 p-1"></i>
+              <i class="fa-sharp fa-solid fa-face-laugh-squint -ml-2 text-[#d7b838]"></i>
+              <p class="text-gray-700 ml-2 cursor-pointer anchor-under">Eahia Qutubi and 1.8M othres</p>
+                <p class="ml-6 text-gray-700 anchor-under cursor-pointer">188K comments</p>
+              <p class="ml-2 text-gray-700 anchor-under cursor-pointer">40K shares</p>
+              </div>
+              <hr class="mt-2 -mb-2 border-1 border-gray-300">
+            <div class="flex items-center font-semibold text-gray-700 ">
+             <div class="flex items-center hover:bg-slate-200 hover:px-10 px-10 rounded-md hover:py-2 py-2 hover:w-[136px] hover:my-3 my-3 active:text-violet-800 active:font-[900]">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2 font-bold">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" />
+              </svg>
+              <p>Like</p>
+            </div>
+              <div class="flex items-center font-semibold text-gray-700 hover:bg-slate-200 hover:px-6 px-6 hover:py-2 py-2 hover:w-[136px] hover:my-2 my-2 hover:rounded-md w-[136px] mx-5">
+                <i class="fa-regular fa-message font-bold text-[17px]"></i>
+                <p class="ml-2">Comments</p>
+              </div>
+              <div class="flex items-center font-semibold text-gray-700  hover:bg-slate-200 hover:px-10 px-10 hover:py-2 py-2 hover:w-[136px] rounded-md hover:my-2 my-2 ">
+                <img src="./images and videos/share.png" class="w-4 mr-1" alt="">
+                <p>Share</p>
+             </div>
+            </div>
+            <hr class="-mt-2 border-1 border-gray-300">
+            <div class="bg-white">
+              <div class="flex items-center justify-between p-2 font-bold text-gray-500">
+                <p class="anchor-under cursor-pointer">View 7 previous comments</p>
+              <p class="cursor-pointer">More relevant 🞃</p>
+              </div>
+              <div class="flex items-center">
+              <a href="#">
+                <img title="Account" 
+                class="w-12 h-12 p-2 rounded-full mr-3"
+                src="./images and videos/samim.jpg"
+                alt="user photo"
+              />
+              </a>
+             <div class="-ml-4 bg-slate-100 rounded-md p-3">
+              <p class="font-semibold text-gray-700 cursor-pointer anchor-under">Samim Ahmed Sarkar</p>
+              <p class="">Nice family 👨🏻‍👩🏻‍👧🏻‍👦🏻</p>
+             </div>
+            </div>
+            </div>
+            <div class="flex items-center  bg-white p-5 rounded-md">
+              <a href="https://www.facebook.com/md.ahsanmustafa.3/">
+              <img title="Account" 
+              class="w-10 h-10 rounded-full mr-3"
+              src="./images and videos/profile.png"
+              alt="user photo"
+            />
+            </a>
+            <div class="w-[380px]">
+              <form class="flex items-center">
+                <div class="relative w-full">
+                  <div
+                    class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                  >
+                  </div>
+                  <input
+                    type="text"
+                    id="simple-search"
+                    class="bg-[#F0F2F5] p-57 outline-none border-none text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Write a comment"
+                    required
+                  />
+                </div>
+              <i class="fa-regular fa-face-smile text-xl  cursor-pointer mx-3"></i>
+              <img src="./images and videos/camera.png" class="w-5 mr-3 cursor-pointer" alt="">
+              <img src="./images and videos/gif.png" class="w-5 mr-3 cursor-pointer" alt="">
+              <img src="./images and videos/paper.png" class="w-5 cursor-pointer" alt="">
+              </form>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div>
+      <div class="bg-white mt-5 rounded-t-md p-5 shadow-md">
+        <div class="flex justify-between">
+          <div class="flex">
+            <img style="width: 40px; height:40px; 
+            " class="rounded-full mr-3" src="./images/story/jhankar-pro.jpg" alt="">
+            <div class="">
+              <h2 class="font-semibold text-gray-700">Jhankar Mahbub</h2>
+            <div class="flex items-center">
+              <p>Just now <span>∙</span></p>
+            <i class="fa-solid fa-earth-americas text-gray-600 text-[12px] ml-1"></i>
+            </div>
+            </div>
+          </div>
+          <div class="text-xl text-gray-600 ">
+            <i class="fa-solid fa-ellipsis mr-3 hover:bg-slate-100 cursor-pointer rounded-full p-2"></i>
+          <i class="fa-solid fa-xmark hover:bg-slate-100 cursor-pointer rounded-full p-2"></i>
+          </div>
+        </div>
+        <p class="mt-3">স্কাই ডাইভিং ২.০ ।। কি আছে জীবনে, লাফ দিয়ে দিছি প্লেন থেকে
+          স্কাই ডাইভিং ২.০ ।। কি আছে জীবনে, লাফ দিয়ে দিছি প্লেন থেকে !!!</p>
+            </div>
+            <video width="449.67" height="240" controls poster="./images/posts/poster.png">
+              <source src="./images/posts/Watch - Facebook.mp4" type="video/mp4">
+              Error Message
+            </video>
+            <div class="mt-3 bg-white py-2">
+              <div class="flex items-center cursor-pointer ml-2">
+                <i class="fa-solid fa-thumbs-up bg-blue-500 text-[10px] text-white p-1 rounded-full"></i>
+              <i class="fa-brands fa-gratipay text-[17px] -ml-2 text-red-600 p-1"></i>
+              <p class="-ml-3">😮</p>
+              <p class="text-gray-700 ml-2 cursor-pointer anchor-under">Jamal Qutubi and 1.8M othres</p>
+                <p class="ml-6 text-gray-700 anchor-under cursor-pointer">188K comments</p>
+              <p class="ml-2 text-gray-700 anchor-under cursor-pointer">40K shares</p>
+              </div>
+              <hr class="mt-2 -mb-2 border-1 border-gray-300">
+            <div class="flex items-center font-semibold text-gray-700 ">
+             <div class="flex items-center hover:bg-slate-200 hover:px-10 px-10 rounded-md hover:py-2 py-2 hover:w-[136px] hover:my-3 my-3 active:text-violet-800 active:font-[900]">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2 font-bold">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" />
+              </svg>
+              <p>Like</p>
+            </div>
+              <div class="flex items-center font-semibold text-gray-700 hover:bg-slate-200 hover:px-6 px-6 hover:py-2 py-2 hover:w-[136px] hover:my-2 my-2 hover:rounded-md w-[136px] mx-5">
+                <i class="fa-regular fa-message font-bold text-[17px]"></i>
+                <p class="ml-2">Comments</p>
+              </div>
+              <div class="flex items-center font-semibold text-gray-700  hover:bg-slate-200 hover:px-10 px-10 hover:py-2 py-2 hover:w-[136px] rounded-md hover:my-2 my-2 ">
+                <img src="./images and videos/share.png" class="w-4 mr-1" alt="">
+                <p>Share</p>
+             </div>
+            </div>
+            <hr class="-mt-2 border-1 border-gray-300">
+            <div class="bg-white">
+              <div class="flex items-center justify-between p-2 font-bold text-gray-500">
+                <p class="anchor-under cursor-pointer">View 7 previous comments</p>
+              <p class="cursor-pointer">More relevant 🞃</p>
+              </div>
+              <div class="flex items-center">
+              <a href="#">
+                <img title="Account" 
+                class="w-12 h-12 p-2 rounded-full mr-3"
+                src="./images and videos/profile.png"
+                alt="user photo"
+              />
+              </a>
+             <div class="-ml-4 bg-slate-100 rounded-md p-3">
+              <p class="font-semibold text-gray-700 cursor-pointer anchor-under">Ahsan Mostafa</p>
+              <p class="">Wow 😮</p>
+             </div>
+            </div>
+            </div>
+            <div class="flex items-center  bg-white p-5 rounded-md">
+              <a href="https://www.facebook.com/md.ahsanmustafa.3/">
+              <img title="Account" 
+              class="w-10 h-10 rounded-full mr-3"
+              src="./images and videos/profile.png"
+              alt="user photo"
+            />
+            </a>
+            <div class="w-[380px]">
+              <form class="flex items-center">
+                <div class="relative w-full">
+                  <div
+                    class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                  >
+                  </div>
+                  <input
+                    type="text"
+                    id="simple-search"
+                    class="bg-[#F0F2F5] p-57 outline-none border-none text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Write a comment"
+                    required
+                  />
+                </div>
+              <i class="fa-regular fa-face-smile text-xl  cursor-pointer mx-3"></i>
+              <img src="./images and videos/camera.png" class="w-5 mr-3 cursor-pointer" alt="">
+              <img src="./images and videos/gif.png" class="w-5 mr-3 cursor-pointer" alt="">
+              <img src="./images and videos/paper.png" class="w-5 cursor-pointer" alt="">
+              </form>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-white mt-5 rounded-t-md p-5 shadow-md">
+      <div class="flex justify-between">
+        <div class="flex">
+          <img style="width: 40px; height:40px; 
+          " class="rounded-full mr-3" src="./images/story/anisul-pro.jpg" alt="">
+          <div class="">
+            <h2 class="font-semibold text-gray-700">Anisul Islam</h2>
+          <div class="flex items-center">
+            <p>12m <span>∙</span></p>
+          <i class="fa-solid fa-earth-americas text-gray-600 text-[12px] ml-1"></i>
+          </div>
+          </div>
+        </div>
+        <div class="text-xl text-gray-600 ">
+          <i class="fa-solid fa-ellipsis mr-3 hover:bg-slate-100 cursor-pointer rounded-full p-2"></i>
+        <i class="fa-solid fa-xmark hover:bg-slate-100 cursor-pointer rounded-full p-2"></i>
+        </div>
+      </div>
+      <p class="mt-3" title="আমার বোনদের নিয়ে কখনো পোস্ট করিনি । ৩ বোনের মধ্যে মেঝ বোন অনেক ভালো ফলাফল করেছে SSC, HSC তে এবং অনেক পুরস্কার পেয়েছে কিন্তু কোনদিন পোস্ট করার দরকার মনে করিনি । 
+
+      কিন্তু আজকাল দেখলাম ভালো রেজাল্ট হলে Proud of you বলে অনেকেই পোস্ট দেন কিন্তু একটু খারাপ হলে আর সেই proud of you পোস্ট দেখা যায়না । 
+      
+      আমার ছোট বোন JSC তে 3.95 / 5.00 পেয়েছে । আমি খুব গর্বিত নই, কিন্তু আমি খুব আনন্দিত আমার বোনের এই ফলাফলে । ছোট ছোট বাচ্চাগুলো বর্তমান পড়াশুনা নামের পাহাড় নিয়ে যেভাবে এতদুর আসছে তার চেয়ে বড় আর কি হতে পারে । বাইরে বসে অনেক বলা যায়, কিন্তু পড়াশুনার পরিবেশ যে আমাদের কত উন্নত তা আমাকে বলতে হবেনা আশা করি সবাই কম বেশী ভালো বুঝেন । ফলাফলের মাপকাঠি দিয়ে যদি এদের ভবিষ্যৎ নির্ধারণ করে দেবার অধিকার আমাদের নেই । পরিবারের এই ছোট সদস্যরা অনেক কিছু প্রত্যাশা করে আমাদের কাছ থেকে তবে রেজাল্ট দিয়ে এই অবুঝ শিশুদের বৈষম্যের বেড়াজালে বন্ধি করা ঠিক নয় । প্রতিযোগিতার চেয়ে একসাথে এগিয়ে চলা খুব জরুরী । 
+      
+      রেজাল্ট দিয়ে বিচার করলে আমি আমার ক্লাসের মধ্যে সবচেয়ে বাজে কয়েকজন স্টুডেন্টের মধ্যে একজন বলতে হবে । কত জায়গায় ভর্তি পরিক্ষা দিতে পারলাম না ইচ্ছা থাকা সত্ত্বেও । অনেকেই বিশ্বাস করেন না যে আমি প্রাইভেট ভার্সিটির স্টুডেন্ট । আসলে আমরা শেখার জন্য, জানার জন্য যতটুকু উৎসাহ আর সময় পাই তার চেয়ে বেশী সময় আর উৎসাহ পাই ভালো রেজাল্ট করার জন্য । 
+      
+      কি ফলাফল আসল সেটা জরুরী নয়, জরুরী হল কতটুকু শিখতে পারছে, কতটুকু নিজেদের জানতে পারছে, কতটুকু পারিবারিক সাপোর্ট পাচ্ছে, কতটুকু ভালোবাসা আর সাহস পাচ্ছে । 
+      
+      আমি গর্বিত নই আমার বোনের জন্য, কিন্তু আমি গর্বিত দেশের সকল দরিদ্র, খেটে-খাওয়া পরিবারের সকল ছাত্রছাত্রীদের জন্য যারা শত প্রতিকূলতার মাঝে পড়াশুনা চালিয়ে যাচ্ছে ।">আমার বোনদের নিয়ে কখনো পোস্ট করিনি । ৩ বোনের মধ্যে মেঝ বোন অনেক ভালো ফলাফল করেছে SSC, HSC তে এবং অনেক পুরস্কার পেয়েছে কিন্তু কোনদিন পোস্ট করার দরকার মনে করিনি । কিন্তু আজকাল দেখলাম ভালো রেজাল্ট হলে Proud of you বলে অনেকেই পোস্ট দেন কিন্তু একটু খারাপ হলে আর সেই proud of you পোস্ট দেখা যায়না ।</p>
+          </div>
+          <img src="./images/posts/anisul.jpg" alt="">
+          <div class="mt-3 bg-white py-2">
+            <div class="flex items-center cursor-pointer ml-2">
+              <i class="fa-solid fa-thumbs-up bg-blue-500 text-[10px] text-white p-1 rounded-full"></i>
+            <i class="fa-brands fa-gratipay text-[17px] -ml-2 text-red-600 p-1"></i>
+            <p class="text-gray-700 ml-2 cursor-pointer anchor-under">Sagor Qutubi and 1.8M othres</p>
+              <p class="ml-6 text-gray-700 anchor-under cursor-pointer">188K comments</p>
+            <p class="ml-2 text-gray-700 anchor-under cursor-pointer">40K shares</p>
+            </div>
+            <hr class="mt-2 -mb-2 border-1 border-gray-300">
+          <div class="flex items-center font-semibold text-gray-700 ">
+           <div class="flex items-center hover:bg-slate-200 hover:px-10 px-10 rounded-md hover:py-2 py-2 hover:w-[136px] hover:my-3 my-3 active:text-violet-800 active:font-[900]">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2 font-bold">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" />
+            </svg>
+            <p>Like</p>
+          </div>
+            <div class="flex items-center font-semibold text-gray-700 hover:bg-slate-200 hover:px-6 px-6 hover:py-2 py-2 hover:w-[136px] hover:my-2 my-2 hover:rounded-md w-[136px] mx-5">
+              <i class="fa-regular fa-message font-bold text-[17px]"></i>
+              <p class="ml-2">Comments</p>
+            </div>
+            <div class="flex items-center font-semibold text-gray-700  hover:bg-slate-200 hover:px-10 px-10 hover:py-2 py-2 hover:w-[136px] rounded-md hover:my-2 my-2 ">
+              <img src="./images and videos/share.png" class="w-4 mr-1" alt="">
+              <p>Share</p>
+           </div>
+          </div>
+          <hr class="-mt-2 border-1 border-gray-300">
+          <div class="bg-white">
+            <div class="flex items-center justify-between p-2 font-bold text-gray-500">
+              <p class="anchor-under cursor-pointer">View 7 previous comments</p>
+            <p class="cursor-pointer">More relevant 🞃</p>
+            </div>
+            <div class="flex items-center">
+            <a href="#">
+              <img title="Account" 
+              class="w-12 h-12 p-2 rounded-full mr-3"
+              src="./images and videos/samim.jpg"
+              alt="user photo"
+            />
+            </a>
+           <div class="-ml-4 bg-slate-100 rounded-md p-3">
+            <p class="font-semibold text-gray-700 cursor-pointer anchor-under">Samim Ahmed Sarkar</p>
+            <p class="">Love this</p>
+           </div>
+          </div>
+          </div>
+          <div class="flex items-center  bg-white p-5 rounded-md">
+            <a href="https://www.facebook.com/md.ahsanmustafa.3/">
+            <img title="Account" 
+            class="w-10 h-10 rounded-full mr-3"
+            src="./images and videos/profile.png"
+            alt="user photo"
+          />
+          </a>
+          <div class="w-[380px]">
+            <form class="flex items-center">
+              <div class="relative w-full">
+                <div
+                  class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                >
+                </div>
+                <input
+                  type="text"
+                  id="simple-search"
+                  class="bg-[#F0F2F5] p-57 outline-none border-none text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Write a comment"
+                  required
+                />
+              </div>
+            <i class="fa-regular fa-face-smile text-xl  cursor-pointer mx-3"></i>
+            <img src="./images and videos/camera.png" class="w-5 mr-3 cursor-pointer" alt="">
+            <img src="./images and videos/gif.png" class="w-5 mr-3 cursor-pointer" alt="">
+            <img src="./images and videos/paper.png" class="w-5 cursor-pointer" alt="">
+            </form>
+            </div>
+          </div>
+      </div>
+      <div>
+        <div class="bg-white mt-5 rounded-t-md p-5 shadow-md">
+          <div class="flex justify-between">
+            <div class="flex">
+              <img style="width: 40px; height:40px; 
+              " class="rounded-full mr-3" src="./images/story/zaheed-pro.jpg" alt="">
+              <div class="">
+                <h2 class="font-semibold text-gray-700">Zaheed Sabur</h2>
+              <div class="flex items-center">
+                <p>22 Dec 2022 <span>∙</span></p>
+              <i class="fa-solid fa-earth-americas text-gray-600 text-[12px] ml-1"></i>
+              </div>
+              </div>
+            </div>
+            <div class="text-xl text-gray-600 ">
+              <i class="fa-solid fa-ellipsis mr-3 hover:bg-slate-100 cursor-pointer rounded-full p-2"></i>
+            <i class="fa-solid fa-xmark hover:bg-slate-100 cursor-pointer rounded-full p-2"></i>
+            </div>
+          </div>
+          <p class="mt-3">My father & mother.</p>
+              </div>
+              <img src="./images/posts/zaheed.jpg" alt="">
+              <div class="mt-3 bg-white py-2">
+                <div class="flex items-center cursor-pointer ml-2">
+                  <i class="fa-solid fa-thumbs-up bg-blue-500 text-[10px] text-white p-1 rounded-full"></i>
+                <i class="fa-brands fa-gratipay text-[17px] -ml-2 text-red-600 p-1"></i>
+                <p class="text-gray-700 ml-2 cursor-pointer anchor-under">Rakib and 1.8M othres</p>
+                  <p class="ml-6 text-gray-700 anchor-under cursor-pointer">188K comments</p>
+                <p class="ml-2 text-gray-700 anchor-under cursor-pointer">40K shares</p>
+                </div>
+                <hr class="mt-2 -mb-2 border-1 border-gray-300">
+              <div class="flex items-center font-semibold text-gray-700 ">
+               <div class="flex items-center hover:bg-slate-200 hover:px-10 px-10 rounded-md hover:py-2 py-2 hover:w-[136px] hover:my-3 my-3 active:text-violet-800 active:font-[900]">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2 font-bold">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" />
+                </svg>
+                <p>Like</p>
+              </div>
+                <div class="flex items-center font-semibold text-gray-700 hover:bg-slate-200 hover:px-6 px-6 hover:py-2 py-2 hover:w-[136px] hover:my-2 my-2 hover:rounded-md w-[136px] mx-5">
+                  <i class="fa-regular fa-message font-bold text-[17px]"></i>
+                  <p class="ml-2">Comments</p>
+                </div>
+                <div class="flex items-center font-semibold text-gray-700  hover:bg-slate-200 hover:px-10 px-10 hover:py-2 py-2 hover:w-[136px] rounded-md hover:my-2 my-2 ">
+                  <img src="./images and videos/share.png" class="w-4 mr-1" alt="">
+                  <p>Share</p>
+               </div>
+              </div>
+              <hr class="-mt-2 border-1 border-gray-300">
+              <div class="bg-white">
+                <div class="flex items-center justify-between p-2 font-bold text-gray-500">
+                  <p class="anchor-under cursor-pointer">View 7 previous comments</p>
+                <p class="cursor-pointer">More relevant 🞃</p>
+                </div>
+                <div class="flex items-center">
+                <a href="#">
+                  <img title="Account" 
+                  class="w-12 h-12 p-2 rounded-full mr-3"
+                  src="./images and videos/samim.jpg"
+                  alt="user photo"
+                />
+                </a>
+               <div class="-ml-4 bg-slate-100 rounded-md p-3">
+                <p class="font-semibold text-gray-700 cursor-pointer anchor-under">Samim Ahmed Sarkar</p>
+                <p class="">Nice family 👨🏻‍👩🏻‍👧🏻‍👦🏻</p>
+               </div>
+              </div>
+              </div>
+              <div class="flex items-center  bg-white p-5 rounded-md">
+                <a href="https://www.facebook.com/md.ahsanmustafa.3/">
+                <img title="Account" 
+                class="w-10 h-10 rounded-full mr-3"
+                src="./images and videos/profile.png"
+                alt="user photo"
+              />
+              </a>
+              <div class="w-[380px]">
+                <form class="flex items-center">
+                  <div class="relative w-full">
+                    <div
+                      class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                    >
+                    </div>
+                    <input
+                      type="text"
+                      id="simple-search"
+                      class="bg-[#F0F2F5] p-57 outline-none border-none text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Write a comment"
+                      required
+                    />
+                  </div>
+                <i class="fa-regular fa-face-smile text-xl  cursor-pointer mx-3"></i>
+                <img src="./images and videos/camera.png" class="w-5 mr-3 cursor-pointer" alt="">
+                <img src="./images and videos/gif.png" class="w-5 mr-3 cursor-pointer" alt="">
+                <img src="./images and videos/paper.png" class="w-5 cursor-pointer" alt="">
+                </form>
+                </div>
+              </div>
+          </div>
+      </div>
+      <div>
+        <!-- ranamati-section -->
+        <div class="bg-white mt-5 rounded-t-md p-5 shadow-md">
+          <div class="flex justify-between">
+            <div class="flex">
+              <img style="width: 40px; height:40px; 
+              " class="rounded-full mr-3" src="./images/posts/ranamati-pro.jpg" alt="">
+              <div class="">
+                <h2 class="font-semibold text-gray-700">প্রিয় চট্টগ্রাম</h2>
+              <div class="flex items-center">
+                <p>Just now <span>∙</span></p>
+              <i class="fa-solid fa-earth-americas text-gray-600 text-[12px] ml-1"></i>
+              </div>
+              </div>
+            </div>
+            <div class="text-xl text-gray-600 ">
+              <i class="fa-solid fa-ellipsis mr-3 hover:bg-slate-100 cursor-pointer rounded-full p-2"></i>
+            <i class="fa-solid fa-xmark hover:bg-slate-100 cursor-pointer rounded-full p-2"></i>
+            </div>
+          </div>
+          <p class="mt-3">“প্রিয় চট্টগ্রাম” কথা বলে চট্টগ্রামের প্রকৃতি, মাটি ও মানুষের। আমাদের ঐক্যের ভিত্তি প্রিয় চট্টগ্রাম।</p>
+              </div>
+              <img src="./images/posts/rangamati.jpg" alt="">
+              <div class="mt-3 bg-white py-2">
+                <div class="flex items-center cursor-pointer ml-2">
+                  <i class="fa-solid fa-thumbs-up bg-blue-500 text-[10px] text-white p-1 rounded-full"></i>
+                <i class="fa-brands fa-gratipay text-[17px] -ml-2 text-red-600 p-1"></i>
+                <p class="text-gray-700 ml-2 cursor-pointer anchor-under">Eahia Qutubi and 1.8M othres</p>
+                  <p class="ml-6 text-gray-700 anchor-under cursor-pointer">188K comments</p>
+                <p class="ml-2 text-gray-700 anchor-under cursor-pointer">40K shares</p>
+                </div>
+                <hr class="mt-2 -mb-2 border-1 border-gray-300">
+              <div class="flex items-center font-semibold text-gray-700 ">
+               <div class="flex items-center hover:bg-slate-200 hover:px-10 px-10 rounded-md hover:py-2 py-2 hover:w-[136px] hover:my-3 my-3 active:text-violet-800 active:font-[900]">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2 font-bold">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" />
+                </svg>
+                <p>Like</p>
+              </div>
+                <div class="flex items-center font-semibold text-gray-700 hover:bg-slate-200 hover:px-6 px-6 hover:py-2 py-2 hover:w-[136px] hover:my-2 my-2 hover:rounded-md w-[136px] mx-5">
+                  <i class="fa-regular fa-message font-bold text-[17px]"></i>
+                  <p class="ml-2">Comments</p>
+                </div>
+                <div class="flex items-center font-semibold text-gray-700  hover:bg-slate-200 hover:px-10 px-10 hover:py-2 py-2 hover:w-[136px] rounded-md hover:my-2 my-2 ">
+                  <img src="./images and videos/share.png" class="w-4 mr-1" alt="">
+                  <p>Share</p>
+               </div>
+              </div>
+              <hr class="-mt-2 border-1 border-gray-300">
+              <div class="bg-white">
+                <div class="flex items-center justify-between p-2 font-bold text-gray-500">
+                  <p class="anchor-under cursor-pointer">View 7 previous comments</p>
+                <p class="cursor-pointer">More relevant 🞃</p>
+                </div>
+               
+              </div>
+              <div class="flex items-center  bg-white p-5 rounded-md">
+                <a href="https://www.facebook.com/md.ahsanmustafa.3/">
+                <img title="Account" 
+                class="w-10 h-10 rounded-full mr-3"
+                src="./images and videos/profile.png"
+                alt="user photo"
+              />
+              </a>
+              <div class="w-[380px]">
+                <form class="flex items-center">
+                  <div class="relative w-full">
+                    <div
+                      class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                    >
+                    </div>
+                    <input
+                      type="text"
+                      id="simple-search"
+                      class="bg-[#F0F2F5] p-57 outline-none border-none text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Write a comment"
+                      required
+                    />
+                  </div>
+                <i class="fa-regular fa-face-smile text-xl  cursor-pointer mx-3"></i>
+                <img src="./images and videos/camera.png" class="w-5 mr-3 cursor-pointer" alt="">
+                <img src="./images and videos/gif.png" class="w-5 mr-3 cursor-pointer" alt="">
+                <img src="./images and videos/paper.png" class="w-5 cursor-pointer" alt="">
+                </form>
+                </div>
+              </div>
+          </div>
+      </div>
+      <div>
+        <div class="bg-white mt-5 rounded-t-md p-5 shadow-md">
+          <div class="flex justify-between">
+            <div class="flex">
+              <img style="width: 40px; height:40px; 
+              " class="rounded-full mr-3" src="./images/posts/soker-pro.jpg" alt="">
+              <div class="">
+                <h2 class="font-semibold text-gray-700">শখের ফটোগ্রাফি</h2>
+              <div class="flex items-center">
+                <p>Just now <span>∙</span></p>
+              <i class="fa-solid fa-earth-americas text-gray-600 text-[12px] ml-1"></i>
+              </div>
+              </div>
+            </div>
+            <div class="text-xl text-gray-600 ">
+              <i class="fa-solid fa-ellipsis mr-3 hover:bg-slate-100 cursor-pointer rounded-full p-2"></i>
+            <i class="fa-solid fa-xmark hover:bg-slate-100 cursor-pointer rounded-full p-2"></i>
+            </div>
+          </div>
+          <p class="mt-3">ডিম দিয়ে হালকা চেষ্টা🥚<br>
+            লোকেশন: ফার্মগেট<br>
+            ডিভাইস: রেডমী নোট 9 প্রো ম্যাক্স</p>
+              </div>
+              <img src="./images/posts/egg.jpg" alt="">
+              <div class="mt-3 bg-white py-2">
+                <div class="flex items-center cursor-pointer ml-2">
+                  <i class="fa-solid fa-thumbs-up bg-blue-500 text-[10px] text-white p-1 rounded-full"></i>
+                <i class="fa-brands fa-gratipay text-[17px] -ml-2 text-red-600 p-1"></i>
+                <i class="fa-sharp fa-solid fa-face-laugh-squint -ml-2 text-[#d7b838]"></i>
+                <p class="text-gray-700 ml-2 cursor-pointer anchor-under">Eahia Qutubi and 1.8M othres</p>
+                  <p class="ml-6 text-gray-700 anchor-under cursor-pointer">188K comments</p>
+                <p class="ml-2 text-gray-700 anchor-under cursor-pointer">40K shares</p>
+                </div>
+                <hr class="mt-2 -mb-2 border-1 border-gray-300">
+              <div class="flex items-center font-semibold text-gray-700 ">
+               <div class="flex items-center hover:bg-slate-200 hover:px-10 px-10 rounded-md hover:py-2 py-2 hover:w-[136px] hover:my-3 my-3 active:text-violet-800 active:font-[900]">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2 font-bold">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" />
+                </svg>
+                <p>Like</p>
+              </div>
+                <div class="flex items-center font-semibold text-gray-700 hover:bg-slate-200 hover:px-6 px-6 hover:py-2 py-2 hover:w-[136px] hover:my-2 my-2 hover:rounded-md w-[136px] mx-5">
+                  <i class="fa-regular fa-message font-bold text-[17px]"></i>
+                  <p class="ml-2">Comments</p>
+                </div>
+                <div class="flex items-center font-semibold text-gray-700  hover:bg-slate-200 hover:px-10 px-10 hover:py-2 py-2 hover:w-[136px] rounded-md hover:my-2 my-2 ">
+                  <img src="./images and videos/share.png" class="w-4 mr-1" alt="">
+                  <p>Share</p>
+               </div>
+              </div>
+              <hr class="-mt-2 border-1 border-gray-300">
+              <div class="bg-white">
+                <div class="flex items-center justify-between p-2 font-bold text-gray-500">
+                  <p class="anchor-under cursor-pointer">View 7 previous comments</p>
+                <p class="cursor-pointer">More relevant 🞃</p>
+                </div>
+                <div class="flex items-center">
+                <a href="#">
+                  <img title="Account" 
+                  class="w-12 h-12 p-2 rounded-full mr-3"
+                  src="./images/story/rose-pro.jpg"
+                  alt="user photo"
+                />
+                </a>
+               <div class="-ml-4 bg-slate-100 rounded-md p-3">
+                <p class="font-semibold text-gray-700 cursor-pointer anchor-under">Rose Marry</p>
+                <p class="">Beautiful</p>
+               </div>
+              </div>
+              </div>
+              <div class="flex items-center  bg-white p-5 rounded-md">
+                <a href="https://www.facebook.com/md.ahsanmustafa.3/">
+                <img title="Account" 
+                class="w-10 h-10 rounded-full mr-3"
+                src="./images and videos/profile.png"
+                alt="user photo"
+              />
+              </a>
+              <div class="w-[380px]">
+                <form class="flex items-center">
+                  <div class="relative w-full">
+                    <div
+                      class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                    >
+                    </div>
+                    <input
+                      type="text"
+                      id="simple-search"
+                      class="bg-[#F0F2F5] p-57 outline-none border-none text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Write a comment"
+                      required
+                    />
+                  </div>
+                <i class="fa-regular fa-face-smile text-xl  cursor-pointer mx-3"></i>
+                <img src="./images and videos/camera.png" class="w-5 mr-3 cursor-pointer" alt="">
+                <img src="./images and videos/gif.png" class="w-5 mr-3 cursor-pointer" alt="">
+                <img src="./images and videos/paper.png" class="w-5 cursor-pointer" alt="">
+                </form>
+                </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+
+    <!-- Last-section -->
+   <!-- drawer init and show -->
+
+
+<!-- drawer component -->
+<div id="drawer-navigation" class="fixed z-40 h-screen p-4 overflow-y-auto bg-[#F0F2F5] w-80 dark:bg-gray-800 ml-[1013px] mt-14" tabindex="-1" aria-labelledby="drawer-navigation-label">
+ <div class="py-4  overflow-scroll">
+     <ul class="space-y-2">
+        <li class="">
+           <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+              <span class="font-bold text-gray-500">Sponsored</span>
+           </a>
+           <h2 class="text-gray-600 mt-4 mb-1 font-semibold text-[17px] ml-2">Birthdays</h2>
+           <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <span class="font-bold text-gray-500 flex items-center text-xxl mb-4">
+              <img src="./images and videos/gift-card.png" class="w-6" alt="">
+              <p class="font-thin ml-4"><span class="text-gray-900 font-semibold">Md. Rakif</span> 's birthday</p>
+            </span>
+         </a>
+           <div class="flex items-center justify-between">
+            <p class="font-semibold text-[17px] text-gray-800 ml-2">Contacts</p>
+           <div class="flex items-center gap-x-3 text-[17px]">
+            <img src="./images and videos/add-video.png" class="w-9 hover:bg-slate-200 rounded-full p-2 cursor-pointer" alt="">
+           <i class="fa-solid fa-magnifying-glass hover:bg-slate-200 rounded-full p-2"></i>
+           <i class="fa-solid fa-ellipsis hover:bg-slate-200 rounded-full p-2"></i>
+           </div>
+           </div>
+        </li>
+        <li>
+           <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                 <img src="./images/chat/anam.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+                 <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">Anamul Haque</span>
+           </button>
+           <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                 <img src="./images/chat/amena.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+                 <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">Amena Akther</span>
+           </button>
+           <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                 <img src="./images/chat/apon.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+                 <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">Nahid Kaiswer Chowdhury Apon</span>
+           </button>
+           <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                 <img src="./images/chat/joy.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+                 <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">Md. Rakif</span>
+           </button>
+           <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                 <img src="./images/chat/mehdi.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+                 <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">Md. Mehedi Hasan</span>
+           </button>
+           <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                 <img src="./images/chat/miskhat.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+                 <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">Mosaddakul Hossain Miskhat</span>
+           </button>
+           <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+            <img src="./images/chat/mojammel.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+            <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">Mojammel Hossain</span>
+            <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+              <img src="./images/chat/mostak.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+              <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">Md Mostak Ahmed</span>
+              <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                <img src="./images/chat/nayeemmama.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+                <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">Abu Nayeem Ibrahim Chowdhury</span>
+          </button>
+          <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+            <img src="./images/chat/miskhat.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+            <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">Mosaddakul Hossain Miskhat</span>
+      </button>
+      <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+        <img src="./images/chat/nijam.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+        <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">Nijam Mojumder</span>
+  </button>
+  <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+    <img src="./images/chat/payel.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+    <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">Tanjina Akther Payel</span>
+</button>
+<button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+  <img src="./images/chat/rana.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+  <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">Ataur Rahman Chowdhury Rana</span>
+</button>
+<button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+  <img src="./images/chat/rifat.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+  <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">Tamjid Hossain Rifat</span>
+</button>
+<button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+  <img src="./images/chat/rifatK.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+  <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">S M Rifat</span>
+</button>
+<button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+  <img src="./images/chat/sadiqa.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+  <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">Sadiqa Ibnat</span>
+</button>
+<button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+  <img src="./images/chat/sakib.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+  <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">Md Sakib</span>
+</button>
+<button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+  <img src="./images/chat/shariar.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+  <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">Montasir Shariar</span>
+</button>
+<button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+  <img src="./images/chat/sifat.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+  <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">Tanvir Hossain Sifat</span>
+</button>
+<button type="button" class="flex items-center w-full  mb-6 p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+  <img src="./images/chat/suny.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+  <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">Shoyeb Mohammed Suny</span>
+</button>
+<h2 class="font-bold text-[17px] text-gray-700 ml-2">Group conversations</h2>
+<button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+  <img src="./images/chat/cmt-group.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+  <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">CMT-B 8th semester</span>
+</button>
+<button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+  <img src="./images/chat/group-2.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+  <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">NIT CMT-B (18,19 B-section)</span>
+</button>
+<button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+  <img src="./images/chat/group-3.png" class="w-7 border-2 border-blue-700 rounded-full" alt="">
+  <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">NIT 8th (oracle batch)</span>
+</button>
+<button type="button" class="flex items-center w-full p-2 mb-10 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+  <i class="fa-solid fa-plus bg-slate-300 rounded-full p-2"></i>
+  <span class="flex-1 ml-3 text-left whitespace-nowrap font-semibold text-gray-600 text-[14px]">Create A New Group</span>
+</button>
+        </button>
+      </button>
+        </li>
+     </ul>
+  </div>
+</div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/bd93403ffd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var swiper = new Swiper(".mySwiperPopular", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          375:{
+            slidesPerView: 1,
+            spaceBetween: 5,
+          },
+          412: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 8,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
